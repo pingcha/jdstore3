@@ -43,7 +43,7 @@ class OrdersController < ApplicationController
     @order.set_payment_with!("wechat")
     @order.make_payment!
 
-    redirect_to order_path(@order.token), notice: "使用微信成功完成付款"
+    redirect_to order_path(@order.token), notice: "使用微信支付成功完成付款"
   end
 
   def apply_to_cancel
